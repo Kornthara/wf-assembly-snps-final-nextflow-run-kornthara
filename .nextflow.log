@@ -1,253 +1,205 @@
-Aug-28 12:09:26.023 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile docker --input /home/kornthara/moveBPfasta/ --outdir /home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults --snp_package parsnp
-Aug-28 12:09:26.115 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
-Aug-28 12:09:26.145 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/kornthara/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
-Aug-28 12:09:26.165 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Aug-28 12:09:26.166 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Aug-28 12:09:26.169 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Aug-28 12:09:26.186 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Aug-28 12:09:26.212 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/nextflow.config
-Aug-28 12:09:26.215 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/nextflow.config
-Aug-28 12:09:26.264 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/kornthara/.nextflow/secrets/store.json
-Aug-28 12:09:26.268 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@267bbe1a] - activable => nextflow.secret.LocalSecretsProvider@267bbe1a
-Aug-28 12:09:26.281 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
-Aug-28 12:09:27.592 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [aspen_hpc, debug, shifter, test, local_workstation, conda, dgx_station, singularity, rosalind_hpc, test_full, docker]
-Aug-28 12:09:27.628 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
-Aug-28 12:09:27.642 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [drunk_darwin] DSL2 - revision: 49465e2bec
-Aug-28 12:09:27.644 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Aug-28 12:09:27.644 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Aug-28 12:09:27.694 [main] DEBUG nextflow.Session - Session UUID: 191c72ea-7723-4b69-8e12-3bbfb8197dd7
-Aug-28 12:09:27.695 [main] DEBUG nextflow.Session - Run name: drunk_darwin
-Aug-28 12:09:27.695 [main] DEBUG nextflow.Session - Executor pool size: 22
-Aug-28 12:09:27.703 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Aug-28 12:09:27.709 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Aug-28 12:09:27.733 [main] DEBUG nextflow.cli.CmdRun - 
+Aug-28 12:46:17.534 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile docker --i /home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/results/Assembly --o /home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults --snp_package parsnp
+Aug-28 12:46:17.623 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Aug-28 12:46:17.658 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/kornthara/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Aug-28 12:46:17.678 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-28 12:46:17.679 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-28 12:46:17.681 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Aug-28 12:46:17.692 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-28 12:46:17.728 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/nextflow.config
+Aug-28 12:46:17.731 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/nextflow.config
+Aug-28 12:46:17.774 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/kornthara/.nextflow/secrets/store.json
+Aug-28 12:46:17.779 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@2234078] - activable => nextflow.secret.LocalSecretsProvider@2234078
+Aug-28 12:46:17.791 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Aug-28 12:46:19.607 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, embl_hd, denbi_qbic, alice, mjolnir_globe, uppmax, giga, incliva, ilifu, ki_luria, uge, icr_alma, rosalind_uge, lugh, mccleary, unibe_ibu, vai, czbiohub_aws, jax, roslin, tes, scw, unc_longleaf, tigem, tubingen_apg, apollo, ipop_up, vsc_calcua, pdc_kth, ceci_nic5, ccga_cau, humantechnopole, stjude, daisybio, eddie, medair, biowulf, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, fred_hutch, seattlechildrens, icr_davros, ceres, arm, munin, rosalind, hasta, cfc, uzh, shu_bmrc, ebi_codon_slurm, ebc, ccga_dx, crick, ku_sund_danhead, marvin, shifter, biohpc_gen, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, ceci_dragon2, imperial, maestro, software_license, cannon, genotoul, nci_gadi, abims, eva_grace, janelia, nu_genomics, googlebatch, oist, sahmri, kaust, alliance_canada, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, marjorie, computerome, ucd_sonic, seg_globe, mssm, sanger, dkfz, bluebear, pasteur, einstein, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, seadragon, crukmi, csiro_petrichor, qmul_apocrita, wave, docker, engaging, gis, hypatia, psmn, eva, unity, cropdiversityhpc, nygc, fgcz, conda, crg, singularity, mpcdf_viper, pe2, self_hosted_runner, tufts, uw_hyak_pedslabs, binac2, debug, genouest, cbe, unsw_katana, utd_juno, gitpod, phoenix, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, local_12core, binac, fsu_draco]
+Aug-28 12:46:19.641 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Aug-28 12:46:19.656 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [sad_mccarthy] DSL2 - revision: 29e61374d2
+Aug-28 12:46:19.657 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.3.0]
+Aug-28 12:46:19.658 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-28 12:46:19.659 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.3.0]
+Aug-28 12:46:19.660 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.3.0
+Aug-28 12:46:19.670 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.3.0' resolved
+Aug-28 12:46:19.670 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.3.0'
+Aug-28 12:46:19.676 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.3.0
+Aug-28 12:46:19.735 [main] DEBUG nextflow.Session - Session UUID: 48f388d8-f1e3-4d8b-8479-7b761ae8bd37
+Aug-28 12:46:19.735 [main] DEBUG nextflow.Session - Run name: sad_mccarthy
+Aug-28 12:46:19.735 [main] DEBUG nextflow.Session - Executor pool size: 22
+Aug-28 12:46:19.743 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Aug-28 12:46:19.748 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-28 12:46:19.772 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 25.04.6 build 5954
   Created: 01-07-2025 11:27 UTC (18:27 ICST)
   System: Linux 6.14.0-28-generic
   Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.16+8-Ubuntu-0ubuntu124.04.1
   Encoding: UTF-8 (UTF-8)
-  Process: 227231@stealth-16-mercedesamg-a1vgg [130.130.2.243]
-  CPUs: 22 - Mem: 62.3 GB (51.5 GB) - Swap: 8 GB (8 GB)
-Aug-28 12:09:27.774 [main] DEBUG nextflow.Session - Work-dir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work [ext2/ext3]
-Aug-28 12:09:27.833 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Aug-28 12:09:27.846 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Aug-28 12:09:27.878 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
-Aug-28 12:09:27.898 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Aug-28 12:09:27.906 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 23; maxThreads: 1000
-Aug-28 12:09:27.974 [main] DEBUG nextflow.Session - Session start
-Aug-28 12:09:27.981 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults/pipeline_info/execution_trace_2025-08-28_12-09-27.txt
-Aug-28 12:09:27.988 [main] DEBUG nextflow.Session - Using default localLib path: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/lib
-Aug-28 12:09:27.991 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/lib
-Aug-28 12:09:27.991 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/lib/nfcore_external_java_deps.jar
-Aug-28 12:09:28.673 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Aug-28 12:09:28.717 [main] INFO  nextflow.Nextflow - 
-
+  Process: 259469@stealth-16-mercedesamg-a1vgg [130.130.2.243]
+  CPUs: 22 - Mem: 62.3 GB (51.1 GB) - Swap: 8 GB (8 GB)
+Aug-28 12:46:19.792 [main] DEBUG nextflow.Session - Work-dir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work [ext2/ext3]
+Aug-28 12:46:19.829 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-28 12:46:19.838 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-28 12:46:19.861 [main] DEBUG nextflow.Session - Observer factory: ValidationObserverFactory
+Aug-28 12:46:19.883 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Aug-28 12:46:19.905 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-28 12:46:19.914 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 23; maxThreads: 1000
+Aug-28 12:46:19.984 [main] DEBUG nextflow.Session - Session start
+Aug-28 12:46:19.987 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/null/pipeline_info/execution_trace_2025-08-28_12-46-18.txt
+Aug-28 12:46:20.002 [main] DEBUG nextflow.Session - Using default localLib path: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/lib
+Aug-28 12:46:20.006 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/lib
+Aug-28 12:46:20.006 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/lib/nfcore_external_java_deps.jar
+Aug-28 12:46:20.190 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-28 12:46:21.061 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Aug-28 12:46:21.406 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Aug-28 12:46:21.407 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Aug-28 12:46:21.409 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Aug-28 12:46:21.409 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
+Aug-28 12:46:21.626 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog]; plugin Id: nf-schema
+Aug-28 12:46:21.627 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters]; plugin Id: nf-schema
+Aug-28 12:46:21.629 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-schema
+Aug-28 12:46:21.630 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [samplesheetToList:samplesheetToList]; plugin Id: nf-schema
+Aug-28 12:46:21.813 [main] INFO  nextflow.Nextflow - 
 -[2m----------------------------------------------------[0m-
-[0;34m     __         __ __ __     __            __     __  __    [0m
-[0;34m|  ||_  __  /\ (_ (_ |_ |\/||__)|  \_/ __ (_ |\ ||__)(_ [0m
-[0;34m|/\||      /--\__)__)|__|  ||__)|__ |     __)| \||   __) [0m
-
-[0;32m       Identify SNPs from genome assemblies.               [0m
-
-
-[0;35m     bacterial-genomics/wf-assembly-snps v1.0.2[0m
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/assemblysnps 1.0.0dev[0m
 -[2m----------------------------------------------------[0m-
-[1mCore Nextflow options[0m
-  [0;34mrunName             : [0;32mdrunk_darwin[0m
-  [0;34mcontainerEngine     : [0;32mdocker[0m
-  [0;34mlaunchDir           : [0;32m/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara[0m
-  [0;34mworkDir             : [0;32m/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work[0m
-  [0;34mprojectDir          : [0;32m/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara[0m
-  [0;34muserName            : [0;32mkornthara[0m
-  [0;34mprofile             : [0;32mdocker[0m
-  [0;34mconfigFiles         : [0;32m/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/nextflow.config[0m
-
-[1mInput/output options[0m
-  [0;34minput               : [0;32m/home/kornthara/moveBPfasta/[0m
-  [0;34moutdir              : [0;32m/home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults[0m
-
-[1mAnalysis options[0m
-  [0;34mrecombination       : [0;32mnone[0m
-
-[1mProfile options[0m
-  [0;34mprofile_cache_dir   : [0;32m/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/assets/.cache[0m
-
 [1mGeneric options[0m
-  [0;34mtracedir            : [0;32m/home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults/pipeline_info[0m
-  [0;34mprocess_log_dir     : [0;32m/home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults/pipeline_info/process_logs[0m
-  [0;34mqc_filecheck_log_dir: [0;32m/home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults/pipeline_info/qc_file_checks[0m
+  [0;34mtrace_report_suffix: [0;32m2025-08-28_12-46-18[0m
+
+[1mCore Nextflow options[0m
+  [0;34mrunName            : [0;32msad_mccarthy[0m
+  [0;34mcontainerEngine    : [0;32mdocker[0m
+  [0;34mlaunchDir          : [0;32m/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara[0m
+  [0;34mworkDir            : [0;32m/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work[0m
+  [0;34mprojectDir         : [0;32m/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara[0m
+  [0;34muserName           : [0;32mkornthara[0m
+  [0;34mprofile            : [0;32mdocker[0m
+  [0;34mconfigFiles        : [0;32m/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/nextflow.config[0m
 
 !! Only displaying parameters that differ from the pipeline defaults !!
 -[2m----------------------------------------------------[0m-
-If you use bacterial-genomics/wf-assembly-snps for your analysis please cite:
-
 * The nf-core framework
-  https://doi.org/10.1038/s41587-020-0439-x
+    https://doi.org/10.1038/s41587-020-0439-x
 
 * Software dependencies
-  https://github.com/bacterial-genomics/wf-assembly-snps/blob/main/CITATIONS.md
--[2m----------------------------------------------------[0m-
-Aug-28 12:09:28.812 [main] WARN  nextflow.Nextflow - Found unexpected parameters:
-* --mash_min_copies: 1
-* --mash_kmer_size: 21
-* --mash_sketch_size: 10000
-Aug-28 12:09:28.813 [main] INFO  nextflow.Nextflow - - [2mIgnore this warning: params.schema_ignore_params = "mash_min_copies,mash_kmer_size,mash_sketch_size" [0m
-Aug-28 12:09:30.507 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Aug-28 12:09:30.507 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Aug-28 12:09:30.513 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Aug-28 12:09:30.518 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=22; memory=62.3 GB; capacity=22; pollInterval=100ms; dumpInterval=5m
-Aug-28 12:09:30.520 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-Aug-28 12:09:30.547 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:INFILE_HANDLING_UNIX': maxForks=0; fair=false; array=0
-Aug-28 12:09:30.603 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP
-Aug-28 12:09:30.604 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CORE_GENOME_ALIGNMENT_PARSNP` matches process ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP
-Aug-28 12:09:30.606 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Aug-28 12:09:30.606 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Aug-28 12:09:30.607 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP': maxForks=0; fair=false; array=0
-Aug-28 12:09:30.620 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name ASSEMBLY_SNPS:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS
-Aug-28 12:09:30.621 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS` matches process ASSEMBLY_SNPS:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS
-Aug-28 12:09:30.623 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Aug-28 12:09:30.624 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Aug-28 12:09:30.624 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS': maxForks=0; fair=false; array=0
-Aug-28 12:09:30.635 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY_SNPS:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS
-Aug-28 12:09:30.635 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS` matches process ASSEMBLY_SNPS:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS
-Aug-28 12:09:30.637 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Aug-28 12:09:30.637 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Aug-28 12:09:30.638 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS': maxForks=0; fair=false; array=0
-Aug-28 12:09:30.655 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name ASSEMBLY_SNPS:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS
-Aug-28 12:09:30.657 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS` matches process ASSEMBLY_SNPS:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS
-Aug-28 12:09:30.660 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Aug-28 12:09:30.660 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Aug-28 12:09:30.661 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS': maxForks=0; fair=false; array=0
-Aug-28 12:09:30.677 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY_SNPS:MASK_RECOMBINANT_POSITIONS_BIOPYTHON
-Aug-28 12:09:30.677 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MASK_RECOMBINANT_POSITIONS_BIOPYTHON` matches process ASSEMBLY_SNPS:MASK_RECOMBINANT_POSITIONS_BIOPYTHON
-Aug-28 12:09:30.680 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Aug-28 12:09:30.680 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Aug-28 12:09:30.681 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:MASK_RECOMBINANT_POSITIONS_BIOPYTHON': maxForks=0; fair=false; array=0
-Aug-28 12:09:30.688 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY_SNPS:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS
-Aug-28 12:09:30.688 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS` matches process ASSEMBLY_SNPS:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS
-Aug-28 12:09:30.691 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Aug-28 12:09:30.691 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Aug-28 12:09:30.691 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS': maxForks=0; fair=false; array=0
-Aug-28 12:09:30.706 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY_SNPS:BUILD_PHYLOGENETIC_TREE_PARSNP
-Aug-28 12:09:30.707 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BUILD_PHYLOGENETIC_TREE_PARSNP` matches process ASSEMBLY_SNPS:BUILD_PHYLOGENETIC_TREE_PARSNP
-Aug-28 12:09:30.708 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Aug-28 12:09:30.709 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Aug-28 12:09:30.710 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:BUILD_PHYLOGENETIC_TREE_PARSNP': maxForks=0; fair=false; array=0
-Aug-28 12:09:30.742 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: INFILE_HANDLING_UNIX, IQTREE_FAST, MASH_SKETCH, ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP, GUBBINS_CLUSTER, SNP_SITES, CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS, ASSEMBLY_SNPS:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS, CONVERT_GINGR_TO_FASTA_HARVESTTOOLS, ASSEMBLY_SNPS:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS, MASK_RECOMBINANT_POSITIONS_BIOPYTHON, CORE_GENOME_ALIGNMENT_PARSNP, ASSEMBLY_SNPS:MASK_RECOMBINANT_POSITIONS_BIOPYTHON, MASH_DIST, REF_INFILE_HANDLING_UNIX, CONVERT_TSV_TO_EXCEL_PYTHON, USHER_PLACE, ASSEMBLY_SNPS:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS, CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS, ASSEMBLY_SNPS:BUILD_PHYLOGENETIC_TREE_PARSNP, CONVERT_SAMPLESHEET_PYTHON, CLUSTER_GENOMES, RECOMBINATION_GUBBINS, CREATE_EXCEL_RUN_SUMMARY_PYTHON, ASSEMBLY_SNPS:INFILE_HANDLING_UNIX, USHER_BUILD, CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS, ASSEMBLY_SNPS:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS, SKA_BUILD, BUILD_PHYLOGENETIC_TREE_PARSNP, SKA_ALIGN, RECOMBINATION_CLONALFRAMEML
-Aug-28 12:09:30.749 [main] DEBUG nextflow.Session - Igniting dataflow network (17)
-Aug-28 12:09:30.756 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX
-Aug-28 12:09:30.756 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP
-Aug-28 12:09:30.756 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS
-Aug-28 12:09:30.756 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS
-Aug-28 12:09:30.757 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS
-Aug-28 12:09:30.757 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:MASK_RECOMBINANT_POSITIONS_BIOPYTHON
-Aug-28 12:09:30.757 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS
-Aug-28 12:09:30.757 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:BUILD_PHYLOGENETIC_TREE_PARSNP
-Aug-28 12:09:30.758 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
-  Script_b9a8232e0fa11be0: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/create_masked_snp_distance_matrix_snp_dists/main.nf
-  Script_daab3931d6dbebc6: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/convert_tsv_to_excel_python/main.nf
-  Script_0a5ea6c77e76c1cd: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/cluster_genomes/main.nf
-  Script_1d5a91c0e68cf3fc: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/mash_sketch/main.nf
-  Script_de42343b4a60b37d: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/create_snp_distance_matrix_snp_dists/main.nf
-  Script_92a8fd2e65506f13: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/create_excel_run_summary_python/main.nf
-  Script_bdfe511ac4c90ab8: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/subworkflows/local/recombination.nf
-  Script_65bc00620ad647f1: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/ska_build/main.nf
-  Script_cdc219c241584917: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/core_genome_alignment_parsnp/main.nf
-  Script_8f3222acc5105b8e: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/subworkflows/local/clustering.nf
-  Script_deecfb13783fd705: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/recombination_gubbins/main.nf
-  Script_53b40eb3093c3510: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/subworkflows/local/input_check.nf
-  Script_6ef5bdac66e9e392: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/build_phylogenetic_tree_parsnp/main.nf
-  Script_cf92b0cfd5970f35: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/convert_samplesheet_python/main.nf
-  Script_d3e379f9c47039c6: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/snp_sites/main.nf
-  Script_ad137d4b8766f910: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/ska_align/main.nf
-  Script_79dadc857ac629b0: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/main.nf
-  Script_48f795bb493c5d37: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/mash_dist/main.nf
-  Script_3574da1c2da63d5e: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/subworkflows/local/clustered_snp_tree.nf
-  Script_65551c1efb934fe8: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/iqtree_fast/main.nf
-  Script_b86bc69fb8228a3e: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/recombination_clonalframeml/main.nf
-  Script_3710c6c0a9c48c8b: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/usher_build/main.nf
-  Script_53027aa9816972db: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/calculate_pairwise_distances_snp_dists/main.nf
-  Script_7d61816644fd1f45: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/gubbins_cluster/main.nf
-  Script_5f67d8ec0981f5d5: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/workflows/assembly_snps_scalable.nf
-  Script_65ed891bd0e407ab: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/usher_place/main.nf
-  Script_4fa35410fba01909: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/subworkflows/local/usher_placement.nf
-  Script_30224b4410519b3a: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/mask_recombinant_positions_biopython/main.nf
-  Script_d97613bdf9c0d9be: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/convert_gingr_to_fasta_harvesttools/main.nf
-  Script_cf1907f7a901597f: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/workflows/assembly_snps.nf
-  Script_b712480f57627fb6: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/infile_handling_unix/main.nf
-Aug-28 12:09:30.758 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
-Aug-28 12:09:30.758 [main] DEBUG nextflow.Session - Session await
-Aug-28 12:09:30.952 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
-Aug-28 12:09:30.957 [Task submitter] INFO  nextflow.Session - [bb/56925d] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (moveB)
-Aug-28 12:09:31.405 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (moveB); status: COMPLETED; exit: 1; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/bb/56925d16c8a4f451467c473ac9c4f0]
-Aug-28 12:09:31.406 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
-Aug-28 12:09:31.418 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
-  task: name=ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (moveB); work-dir=/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/bb/56925d16c8a4f451467c473ac9c4f0
-  error [nextflow.exception.ProcessFailedException]: Process `ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (moveB)` terminated with an error exit status (1)
-Aug-28 12:09:31.435 [TaskFinalizer-1] ERROR nextflow.processor.TaskProcessor - Error executing process > 'ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (moveB)'
+    https://github.com/nf-core/assemblysnps/blob/master/CITATIONS.md
 
-Caused by:
-  Process `ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (moveB)` terminated with an error exit status (1)
+Aug-28 12:46:21.815 [main] DEBUG n.validation.ValidationExtension - Starting parameters validation
+Aug-28 12:46:21.856 [main] WARN  n.validation.ValidationExtension - The following invalid input values have been detected:
+
+* --i: /home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/results/Assembly
+* --o: /home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults
+* --snp_package: parsnp
 
 
-Command executed:
+Aug-28 12:46:21.946 [main] DEBUG n.v.FormatDirectoryPathEvaluator - Cloud blob storage paths are not supported by 'FormatDirectoryPathEvaluator': 's3://ngi-igenomes/igenomes/'
+Aug-28 12:46:21.954 [main] ERROR n.validation.ValidationExtension - Validation of pipeline parameters failed!
+Aug-28 12:46:21.959 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_6390e5fe7c0c2d5a: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/harvesttools/main.nf
+  Script_4f612cfd8c52e8cd: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/subworkflows/nf-core/utils_nextflow_pipeline/main.nf
+  Script_d0934f31ad677997: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/nf-core/snpsites/main.nf
+  Script_215a636da7ab24a2: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/subworkflows/nf-core/utils_nfschema_plugin/main.nf
+  Script_f1d193943e70107a: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/workflows/assemblysnps.nf
+  Script_5c4e8d4051efa81e: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/subworkflows/nf-core/utils_nfcore_pipeline/main.nf
+  Script_fbdc26ee9e8cfa4a: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/main.nf
+  Script_bcd94ac234b12dbe: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/nf-core/snpdists/main.nf
+  Script_f619dd7e82fb284f: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/local/parsnp/main.nf
+  Script_0fdb2e5f8575be0c: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/nf-core/multiqc/main.nf
+  Script_dc41886bdbd95b0b: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/modules/nf-core/fastqc/main.nf
+  Script_5e5a29398f5c43ef: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/subworkflows/local/utils_nfcore_assemblysnps_pipeline/main.nf
+Aug-28 12:46:21.959 [main] DEBUG nextflow.Session - Session aborted -- Cause: [0;31mThe following invalid input values have been detected:
 
-  source bash_functions.sh
-  
-  # Rename input files to prefix and move to inputfiles dir
-  mkdir inputfiles
-  cp moveBPfasta inputfiles/"moveB.moveBPfasta"
-  
-  # gunzip all files that end in .{gz,Gz,GZ,gZ}
-  find -L inputfiles/ -type f -name '*.[gG][zZ]' -exec gunzip -f {} +
-  
-  # Filter out small inputfiles
-  msg "Checking input file sizes.."
-  echo -e "Sample name	QC step	Outcome (Pass/Fail)" > "moveB.Initial_Input_File.tsv"
-  for file in inputfiles/*; do
-    if verify_minimum_file_size "${file}" 'Input' "1k"; then
-      echo -e "$(basename ${file%%.*})	Input File	PASS"         >> "moveB.Initial_Input_File.tsv"
-    else
-      echo -e "$(basename ${file%%.*})	Input File	FAIL"         >> "moveB.Initial_Input_File.tsv"
-  
-      rm ${file}
-    fi
-  done
-  
-  cat <<-END_VERSIONS > versions.yml
-  "ASSEMBLY_SNPS:INFILE_HANDLING_UNIX":
-    ubuntu: $(awk -F ' ' '{print $2,$3}' /etc/issue | tr -d '\n')
-  END_VERSIONS
+* Missing required parameter(s): input, outdir
+[0m
 
-Command exit status:
-  1
+Aug-28 12:46:21.972 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+nextflow.validation.SchemaValidationException: [0;31mThe following invalid input values have been detected:
 
-Command output:
-  (empty)
+* Missing required parameter(s): input, outdir
+[0m
 
-Command error:
-  cp: -r not specified; omitting directory 'moveBPfasta'
-
-Work dir:
-  /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/bb/56925d16c8a4f451467c473ac9c4f0
-
-Container:
-  ubuntu:jammy
-
-Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
-Aug-28 12:09:31.445 [main] DEBUG nextflow.Session - Session await > all processes finished
-Aug-28 12:09:31.449 [Actor Thread 20] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
-Aug-28 12:09:31.449 [Actor Thread 18] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
-Aug-28 12:09:31.455 [TaskFinalizer-1] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
-Aug-28 12:09:31.463 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
-Aug-28 12:09:31.463 [main] DEBUG nextflow.Session - Session await > all barriers passed
-Aug-28 12:09:31.465 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
-Aug-28 12:09:31.469 [main] INFO  nextflow.Nextflow - -[0;35m[bacterial-genomics/wf-assembly-snps][0;31m Pipeline completed with errors[0m-
-Aug-28 12:09:31.470 [main] INFO  nextflow.Nextflow - -[0;35m[bacterial-genomics/wf-assembly-snps][0;31m Pipeline completed with errors[0m-
-Aug-28 12:09:31.478 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=372ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=6 GB; ]
-Aug-28 12:09:31.478 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
-Aug-28 12:09:31.480 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
-Aug-28 12:09:31.892 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
-Aug-28 12:09:32.060 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Aug-28 12:09:32.074 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
-Aug-28 12:09:32.075 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+	at nextflow.validation.ValidationExtension.validateParameters(ValidationExtension.groovy:322)
+	at nextflow.validation.ValidationExtension.validateParameters(ValidationExtension.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at nextflow.script.FunctionDef.invoke_a(FunctionDef.groovy:64)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:105)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:392)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_215a636da7ab24a2$_runScript_closure1$_closure2.doCall(Script_215a636da7ab24a2:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:205)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:189)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:105)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:392)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_5e5a29398f5c43ef$_runScript_closure3$_closure5.doCall(Script_5e5a29398f5c43ef:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:205)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:189)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:105)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:392)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:331)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_fbdc26ee9e8cfa4a$_runScript_closure2$_closure4.doCall(Script_fbdc26ee9e8cfa4a:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:205)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:189)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:182)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:193)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:246)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:246)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:139)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:379)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)
