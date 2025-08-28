@@ -1,0 +1,425 @@
+Aug-28 10:11:09.321 [main] DEBUG nextflow.cli.Launcher - $> nextflow run bacterial-genomics/wf-assembly-snps -r main -profile docker --input /home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/results/Assembly --outdir /home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults --snp_package parsnp
+Aug-28 10:11:09.408 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Aug-28 10:11:09.430 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/kornthara/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Aug-28 10:11:09.455 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-28 10:11:09.456 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-28 10:11:09.458 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Aug-28 10:11:09.468 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-28 10:11:09.477 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/kornthara/.nextflow/scm
+Aug-28 10:11:10.288 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/.git/config; branch: null; remote: origin; url: https://github.com/bacterial-genomics/wf-assembly-snps.git
+Aug-28 10:11:10.324 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Aug-28 10:11:10.333 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/.git/config; branch: null; remote: origin; url: https://github.com/bacterial-genomics/wf-assembly-snps.git
+Aug-28 10:11:11.493 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/nextflow.config
+Aug-28 10:11:11.494 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/nextflow.config
+Aug-28 10:11:11.496 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/nextflow.config
+Aug-28 10:11:11.497 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/nextflow.config
+Aug-28 10:11:11.507 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/kornthara/.nextflow/secrets/store.json
+Aug-28 10:11:11.510 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@413d2cd1] - activable => nextflow.secret.LocalSecretsProvider@413d2cd1
+Aug-28 10:11:11.521 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Aug-28 10:11:12.154 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Aug-28 10:11:12.484 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [aspen_hpc, debug, shifter, test, local_workstation, conda, dgx_station, singularity, rosalind_hpc, test_full, docker]
+Aug-28 10:11:12.507 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Aug-28 10:11:12.508 [main] DEBUG nextflow.cli.CmdRun - Launching `https://github.com/bacterial-genomics/wf-assembly-snps` [angry_carlsson] DSL2 - revision: 6ce798b7e2 [main]
+Aug-28 10:11:12.509 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-28 10:11:12.509 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Aug-28 10:11:12.576 [main] DEBUG nextflow.Session - Session UUID: 96bb6eb9-48e5-4303-a78d-9b2d2d779792
+Aug-28 10:11:12.576 [main] DEBUG nextflow.Session - Run name: angry_carlsson
+Aug-28 10:11:12.576 [main] DEBUG nextflow.Session - Executor pool size: 22
+Aug-28 10:11:12.584 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Aug-28 10:11:12.589 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-28 10:11:12.610 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (18:27 ICST)
+  System: Linux 6.14.0-28-generic
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.16+8-Ubuntu-0ubuntu124.04.1
+  Encoding: UTF-8 (UTF-8)
+  Process: 148884@stealth-16-mercedesamg-a1vgg [130.130.2.243]
+  CPUs: 22 - Mem: 62.3 GB (54.1 GB) - Swap: 8 GB (8 GB)
+Aug-28 10:11:12.622 [main] DEBUG nextflow.Session - Work-dir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work [ext2/ext3]
+Aug-28 10:11:12.661 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-28 10:11:12.675 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-28 10:11:12.713 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Aug-28 10:11:12.762 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-28 10:11:12.777 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 23; maxThreads: 1000
+Aug-28 10:11:12.834 [main] DEBUG nextflow.Session - Session start
+Aug-28 10:11:12.837 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults/pipeline_info/execution_trace_2025-08-28_10-11-12.txt
+Aug-28 10:11:12.843 [main] DEBUG nextflow.Session - Using default localLib path: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/lib
+Aug-28 10:11:12.845 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/lib
+Aug-28 10:11:12.846 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/lib/nfcore_external_java_deps.jar
+Aug-28 10:11:13.494 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-28 10:11:13.536 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+[0;34m     __         __ __ __     __            __     __  __    [0m
+[0;34m|  ||_  __  /\ (_ (_ |_ |\/||__)|  \_/ __ (_ |\ ||__)(_ [0m
+[0;34m|/\||      /--\__)__)|__|  ||__)|__ |     __)| \||   __) [0m
+
+[0;32m       Identify SNPs from genome assemblies.               [0m
+
+
+[0;35m     bacterial-genomics/wf-assembly-snps v1.0.2-g6ce798b[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrevision            : [0;32mmain[0m
+  [0;34mrunName             : [0;32mangry_carlsson[0m
+  [0;34mcontainerEngine     : [0;32mdocker[0m
+  [0;34mlaunchDir           : [0;32m/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara[0m
+  [0;34mworkDir             : [0;32m/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work[0m
+  [0;34mprojectDir          : [0;32m/home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps[0m
+  [0;34muserName            : [0;32mkornthara[0m
+  [0;34mprofile             : [0;32mdocker[0m
+  [0;34mconfigFiles         : [0;32m/home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/nextflow.config, /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/nextflow.config[0m
+
+[1mInput/output options[0m
+  [0;34minput               : [0;32m/home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/results/Assembly[0m
+  [0;34moutdir              : [0;32m/home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults[0m
+
+[1mAnalysis options[0m
+  [0;34mrecombination       : [0;32mnone[0m
+
+[1mProfile options[0m
+  [0;34mprofile_cache_dir   : [0;32m/home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/assets/.cache[0m
+
+[1mGeneric options[0m
+  [0;34mtracedir            : [0;32m/home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults/pipeline_info[0m
+  [0;34mprocess_log_dir     : [0;32m/home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults/pipeline_info/process_logs[0m
+  [0;34mqc_filecheck_log_dir: [0;32m/home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/SNPresults/pipeline_info/qc_file_checks[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use bacterial-genomics/wf-assembly-snps for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/bacterial-genomics/wf-assembly-snps/blob/main/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+Aug-28 10:11:13.625 [main] WARN  nextflow.Nextflow - Found unexpected parameters:
+* --mash_min_copies: 1
+* --mash_kmer_size: 21
+* --mash_sketch_size: 10000
+Aug-28 10:11:13.626 [main] INFO  nextflow.Nextflow - - [2mIgnore this warning: params.schema_ignore_params = "mash_min_copies,mash_kmer_size,mash_sketch_size" [0m
+Aug-28 10:11:14.597 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-28 10:11:14.598 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-28 10:11:14.602 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-28 10:11:14.607 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=22; memory=62.3 GB; capacity=22; pollInterval=100ms; dumpInterval=5m
+Aug-28 10:11:14.609 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Aug-28 10:11:14.626 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:INFILE_HANDLING_UNIX': maxForks=0; fair=false; array=0
+Aug-28 10:11:14.696 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP
+Aug-28 10:11:14.697 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CORE_GENOME_ALIGNMENT_PARSNP` matches process ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP
+Aug-28 10:11:14.699 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-28 10:11:14.699 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-28 10:11:14.700 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP': maxForks=0; fair=false; array=0
+Aug-28 10:11:14.712 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name ASSEMBLY_SNPS:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS
+Aug-28 10:11:14.713 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS` matches process ASSEMBLY_SNPS:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS
+Aug-28 10:11:14.716 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-28 10:11:14.716 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-28 10:11:14.716 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS': maxForks=0; fair=false; array=0
+Aug-28 10:11:14.729 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY_SNPS:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS
+Aug-28 10:11:14.731 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS` matches process ASSEMBLY_SNPS:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS
+Aug-28 10:11:14.736 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-28 10:11:14.736 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-28 10:11:14.737 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS': maxForks=0; fair=false; array=0
+Aug-28 10:11:14.746 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name ASSEMBLY_SNPS:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS
+Aug-28 10:11:14.747 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS` matches process ASSEMBLY_SNPS:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS
+Aug-28 10:11:14.750 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-28 10:11:14.750 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-28 10:11:14.751 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS': maxForks=0; fair=false; array=0
+Aug-28 10:11:14.772 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY_SNPS:MASK_RECOMBINANT_POSITIONS_BIOPYTHON
+Aug-28 10:11:14.773 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MASK_RECOMBINANT_POSITIONS_BIOPYTHON` matches process ASSEMBLY_SNPS:MASK_RECOMBINANT_POSITIONS_BIOPYTHON
+Aug-28 10:11:14.779 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-28 10:11:14.779 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-28 10:11:14.780 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:MASK_RECOMBINANT_POSITIONS_BIOPYTHON': maxForks=0; fair=false; array=0
+Aug-28 10:11:14.789 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY_SNPS:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS
+Aug-28 10:11:14.790 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS` matches process ASSEMBLY_SNPS:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS
+Aug-28 10:11:14.792 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-28 10:11:14.792 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-28 10:11:14.793 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS': maxForks=0; fair=false; array=0
+Aug-28 10:11:14.807 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY_SNPS:BUILD_PHYLOGENETIC_TREE_PARSNP
+Aug-28 10:11:14.809 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BUILD_PHYLOGENETIC_TREE_PARSNP` matches process ASSEMBLY_SNPS:BUILD_PHYLOGENETIC_TREE_PARSNP
+Aug-28 10:11:14.812 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-28 10:11:14.812 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-28 10:11:14.814 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY_SNPS:BUILD_PHYLOGENETIC_TREE_PARSNP': maxForks=0; fair=false; array=0
+Aug-28 10:11:14.843 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: ASSEMBLY_SNPS:MASK_RECOMBINANT_POSITIONS_BIOPYTHON, REF_INFILE_HANDLING_UNIX, INFILE_HANDLING_UNIX, CONVERT_TSV_TO_EXCEL_PYTHON, ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP, ASSEMBLY_SNPS:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS, CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS, ASSEMBLY_SNPS:BUILD_PHYLOGENETIC_TREE_PARSNP, CONVERT_SAMPLESHEET_PYTHON, RECOMBINATION_GUBBINS, CREATE_EXCEL_RUN_SUMMARY_PYTHON, CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS, ASSEMBLY_SNPS:INFILE_HANDLING_UNIX, ASSEMBLY_SNPS:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS, CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS, ASSEMBLY_SNPS:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS, CONVERT_GINGR_TO_FASTA_HARVESTTOOLS, ASSEMBLY_SNPS:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS, MASK_RECOMBINANT_POSITIONS_BIOPYTHON, CORE_GENOME_ALIGNMENT_PARSNP, BUILD_PHYLOGENETIC_TREE_PARSNP, RECOMBINATION_CLONALFRAMEML
+Aug-28 10:11:14.859 [main] WARN  nextflow.Session - There's no process matching config selector: MASH_SKETCH
+Aug-28 10:11:14.871 [main] WARN  nextflow.Session - There's no process matching config selector: MASH_DIST
+Aug-28 10:11:14.871 [main] WARN  nextflow.Session - There's no process matching config selector: CLUSTER_GENOMES
+Aug-28 10:11:14.874 [main] DEBUG nextflow.Session - Igniting dataflow network (17)
+Aug-28 10:11:14.879 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX
+Aug-28 10:11:14.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP
+Aug-28 10:11:14.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:CONVERT_GINGR_TO_FASTA_HARVESTTOOLS
+Aug-28 10:11:14.880 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/kornthara/wf-paired-end-illumina-assembly/BP_Fastq_05_Jun_2025/results/Assembly/; pattern: **.{fasta,fas,fna,fsa,fa}{,.gz}; options: [checkIfExists:true]
+Aug-28 10:11:14.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:CALCULATE_PAIRWISE_DISTANCES_SNP_DISTS
+Aug-28 10:11:14.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:CREATE_SNP_DISTANCE_MATRIX_SNP_DISTS
+Aug-28 10:11:14.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:MASK_RECOMBINANT_POSITIONS_BIOPYTHON
+Aug-28 10:11:14.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:CREATE_MASKED_SNP_DISTANCE_MATRIX_SNP_DISTS
+Aug-28 10:11:14.880 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY_SNPS:BUILD_PHYLOGENETIC_TREE_PARSNP
+Aug-28 10:11:14.881 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_b9a8232e0fa11be0: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/create_masked_snp_distance_matrix_snp_dists/main.nf
+  Script_daab3931d6dbebc6: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/convert_tsv_to_excel_python/main.nf
+  Script_b86bc69fb8228a3e: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/recombination_clonalframeml/main.nf
+  Script_53027aa9816972db: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/calculate_pairwise_distances_snp_dists/main.nf
+  Script_de42343b4a60b37d: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/create_snp_distance_matrix_snp_dists/main.nf
+  Script_bdfe511ac4c90ab8: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/subworkflows/local/recombination.nf
+  Script_92a8fd2e65506f13: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/create_excel_run_summary_python/main.nf
+  Script_cdc219c241584917: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/core_genome_alignment_parsnp/main.nf
+  Script_deecfb13783fd705: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/recombination_gubbins/main.nf
+  Script_d07a09c54728bf6d: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/main.nf
+  Script_53b40eb3093c3510: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/subworkflows/local/input_check.nf
+  Script_d97613bdf9c0d9be: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/convert_gingr_to_fasta_harvesttools/main.nf
+  Script_30224b4410519b3a: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/mask_recombinant_positions_biopython/main.nf
+  Script_6ef5bdac66e9e392: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/build_phylogenetic_tree_parsnp/main.nf
+  Script_cf1907f7a901597f: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/workflows/assembly_snps.nf
+  Script_cf92b0cfd5970f35: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/convert_samplesheet_python/main.nf
+  Script_b712480f57627fb6: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/modules/local/infile_handling_unix/main.nf
+Aug-28 10:11:14.881 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Aug-28 10:11:14.881 [main] DEBUG nextflow.Session - Session await
+Aug-28 10:11:15.070 [Actor Thread 9] DEBUG nextflow.util.HashBuilder - Hash asset file sha-256: /home/kornthara/.nextflow/assets/bacterial-genomics/wf-assembly-snps/bin/bash_functions.sh
+Aug-28 10:11:15.240 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.243 [Task submitter] INFO  nextflow.Session - [1b/b6a81f] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0196-6_S1_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:15.261 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.262 [Task submitter] INFO  nextflow.Session - [da/f883a8] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0026_S8_L001-SPAdes)
+Aug-28 10:11:15.273 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.274 [Task submitter] INFO  nextflow.Session - [f8/c58cb7] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0197-4_S2_L001-SPAdes_contigs)
+Aug-28 10:11:15.286 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.288 [Task submitter] INFO  nextflow.Session - [7d/7b65ea] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0197-4_S2_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:15.297 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.298 [Task submitter] INFO  nextflow.Session - [62/2ec2dc] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0028_S10_L001-SPAdes)
+Aug-28 10:11:15.310 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.311 [Task submitter] INFO  nextflow.Session - [84/eb68cc] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0200-6_S5_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:15.319 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.321 [Task submitter] INFO  nextflow.Session - [af/a168c4] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0028_S10_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:15.335 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.343 [Task submitter] INFO  nextflow.Session - [c0/c78440] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0198-2_S3_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:15.356 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.360 [Task submitter] INFO  nextflow.Session - [7c/eabfcf] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0199-0_S4_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:15.372 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.378 [Task submitter] INFO  nextflow.Session - [ee/465973] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0027_S9_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:15.761 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0197-4_S2_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/f8/c58cb7bfb080fbd88627310e4b6668]
+Aug-28 10:11:15.761 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-28 10:11:15.766 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.767 [Task submitter] INFO  nextflow.Session - [3f/9686c3] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0171-9-R_S12_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:15.793 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-28 10:11:15.851 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0026_S8_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/da/f883a87886890b445c0f2a0f8fae49]
+Aug-28 10:11:15.861 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.862 [Task submitter] INFO  nextflow.Session - [9c/0c5740] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0202-2_S7_L001-SPAdes)
+Aug-28 10:11:15.887 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0196-6_S1_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/1b/b6a81f9069f36299da01be3cc3f37c]
+Aug-28 10:11:15.894 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.895 [Task submitter] INFO  nextflow.Session - [77/242bf8] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0202-2_S7_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:15.911 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0197-4_S2_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/7d/7b65eada2a01e43db5cca122885e8c]
+Aug-28 10:11:15.918 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.920 [Task submitter] INFO  nextflow.Session - [14/096939] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0201-4_S6_L001-SPAdes)
+Aug-28 10:11:15.934 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0028_S10_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/62/2ec2dc2929068320a1cc4a387a4b45]
+Aug-28 10:11:15.944 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.945 [Task submitter] INFO  nextflow.Session - [09/f493a7] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0029_S11_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:15.963 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0200-6_S5_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/84/eb68ccec1f1c02fb39e1e5b1633cb8]
+Aug-28 10:11:15.971 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.972 [Task submitter] INFO  nextflow.Session - [b6/1cb5a8] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0027_S9_L001-SPAdes)
+Aug-28 10:11:15.989 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0198-2_S3_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/c0/c784405b6faee49b6362aebe197ef7]
+Aug-28 10:11:15.993 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:15.994 [Task submitter] INFO  nextflow.Session - [82/5dbc4f] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0198-2_S3_L001-SPAdes)
+Aug-28 10:11:16.014 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0199-0_S4_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/7c/eabfcf3ada8612f7db699a1c256727]
+Aug-28 10:11:16.019 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.020 [Task submitter] INFO  nextflow.Session - [f3/b03ae8] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0201-4_S6_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:16.056 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0027_S9_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/ee/46597393aa43bf63eb36d4b0ed0070]
+Aug-28 10:11:16.063 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.064 [Task submitter] INFO  nextflow.Session - [13/5a68f3] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0026_S8_L001-SPAdes_discarded-contigs)
+Aug-28 10:11:16.101 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0028_S10_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/af/a168c4fa579042930e3de8e4174661]
+Aug-28 10:11:16.108 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.113 [Task submitter] INFO  nextflow.Session - [3b/cc2078] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0198-2_S3_L001-SPAdes_contigs)
+Aug-28 10:11:16.480 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0202-2_S7_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/9c/0c574026b965ee4e00ecd341a30cd6]
+Aug-28 10:11:16.486 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.487 [Task submitter] INFO  nextflow.Session - [d6/71f4a6] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0196-6_S1_L001-SPAdes)
+Aug-28 10:11:16.511 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0171-9-R_S12_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/3f/9686c37fced3f3b3e318787fa130ab]
+Aug-28 10:11:16.517 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.517 [Task submitter] INFO  nextflow.Session - [a0/c11c3c] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0026_S8_L001-SPAdes_contigs)
+Aug-28 10:11:16.534 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0201-4_S6_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/14/096939537f98403c27a093c52c064e]
+Aug-28 10:11:16.542 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.542 [Task submitter] INFO  nextflow.Session - [63/dad116] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0171-9-R_S12_L001-SPAdes_contigs)
+Aug-28 10:11:16.615 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0027_S9_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/b6/1cb5a883ed3f8a19c7af33e7d1a90f]
+Aug-28 10:11:16.622 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.622 [Task submitter] INFO  nextflow.Session - [52/1a6366] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0029_S11_L001-SPAdes_contigs)
+Aug-28 10:11:16.666 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0029_S11_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/09/f493a7d1721236c5dbe6f421a70079]
+Aug-28 10:11:16.672 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.673 [Task submitter] INFO  nextflow.Session - [c2/5c2939] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0028_S10_L001-SPAdes_contigs)
+Aug-28 10:11:16.721 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0026_S8_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/13/5a68f36a13cbc44ac61bd4d68eeedb]
+Aug-28 10:11:16.725 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.726 [Task submitter] INFO  nextflow.Session - [15/f55ba1] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0027_S9_L001-SPAdes_contigs)
+Aug-28 10:11:16.744 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0202-2_S7_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/77/242bf85d2c7fb141b54f31e1a17550]
+Aug-28 10:11:16.748 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.749 [Task submitter] INFO  nextflow.Session - [df/d40536] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0196-6_S1_L001-SPAdes_contigs)
+Aug-28 10:11:16.769 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0198-2_S3_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/3b/cc2078941c58ba270c394f8240bffb]
+Aug-28 10:11:16.778 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.778 [Task submitter] INFO  nextflow.Session - [19/8f9eac] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0200-6_S5_L001-SPAdes_contigs)
+Aug-28 10:11:16.806 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0201-4_S6_L001-SPAdes_discarded-contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/f3/b03ae861e6a4d0fc8a8ae0e0eb5ea1]
+Aug-28 10:11:16.815 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.816 [Task submitter] INFO  nextflow.Session - [c3/40a8a2] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0201-4_S6_L001-SPAdes_contigs)
+Aug-28 10:11:16.848 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0198-2_S3_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/82/5dbc4f7b94df3969e6278d065438d4]
+Aug-28 10:11:16.857 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:16.858 [Task submitter] INFO  nextflow.Session - [c9/1d1b47] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0202-2_S7_L001-SPAdes_contigs)
+Aug-28 10:11:17.259 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0196-6_S1_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/d6/71f4a6515a4f6455de8c8c0019a6c9]
+Aug-28 10:11:17.267 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:17.267 [Task submitter] INFO  nextflow.Session - [e6/777a28] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0199-0_S4_L001-SPAdes_contigs)
+Aug-28 10:11:17.286 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0171-9-R_S12_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/63/dad116b1234dbfaae79ee8bb9501b6]
+Aug-28 10:11:17.294 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:17.294 [Task submitter] INFO  nextflow.Session - [75/f6ec5d] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0199-0_S4_L001-SPAdes)
+Aug-28 10:11:17.330 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0026_S8_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/a0/c11c3c2614c9ffd82c06a0d6dea86e]
+Aug-28 10:11:17.335 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:17.335 [Task submitter] INFO  nextflow.Session - [45/3e2efa] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0200-6_S5_L001-SPAdes)
+Aug-28 10:11:17.368 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0028_S10_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/c2/5c29399d8f263a982e80b88dce7d48]
+Aug-28 10:11:17.373 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:17.374 [Task submitter] INFO  nextflow.Session - [ad/917459] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0029_S11_L001-SPAdes)
+Aug-28 10:11:17.494 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0027_S9_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/15/f55ba1ff9187bfb42aab70dd7c6dc8]
+Aug-28 10:11:17.501 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:17.502 [Task submitter] INFO  nextflow.Session - [d5/f0058b] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0197-4_S2_L001-SPAdes)
+Aug-28 10:11:17.508 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0029_S11_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/52/1a63667feb24cfcb891bb4d19bb659]
+Aug-28 10:11:17.515 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:17.515 [Task submitter] INFO  nextflow.Session - [ab/867f9f] Submitted process > ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0171-9-R_S12_L001-SPAdes)
+Aug-28 10:11:17.542 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0196-6_S1_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/df/d40536451b5822f3994dd83a2dc436]
+Aug-28 10:11:17.575 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0202-2_S7_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/c9/1d1b47a6c5789907523a6257931308]
+Aug-28 10:11:17.621 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0200-6_S5_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/19/8f9eac64caef53f41bcb7956fa9bc3]
+Aug-28 10:11:17.669 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0201-4_S6_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/c3/40a8a2b99cede46394bab23d0613b9]
+Aug-28 10:11:18.063 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0199-0_S4_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/75/f6ec5df71bcea9d6ce64987f4de73d]
+Aug-28 10:11:18.141 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0171-9-R_S12_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/ab/867f9fa5d13e9b47094f91f463b396]
+Aug-28 10:11:18.175 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0200-6_S5_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/45/3e2efaf326147effa77054017b51aa]
+Aug-28 10:11:18.202 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IE-0029_S11_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/ad/917459c5ae589c572b3dd52eff080b]
+Aug-28 10:11:18.235 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0197-4_S2_L001-SPAdes); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/d5/f0058bef3060c04c6da73b0a94089d]
+Aug-28 10:11:18.262 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: ASSEMBLY_SNPS:INFILE_HANDLING_UNIX (IP-0199-0_S4_L001-SPAdes_contigs); status: COMPLETED; exit: 0; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/e6/777a28c476082b393fa24a763f39df]
+Aug-28 10:11:18.352 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-28 10:11:18.352 [Task submitter] INFO  nextflow.Session - [33/258ed7] Submitted process > ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP (Parsnp)
+Aug-28 10:14:29.258 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP (Parsnp); status: COMPLETED; exit: 1; error: -; workDir: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/33/258ed7fddc1ffdab6d32f65de9a98a]
+Aug-28 10:14:29.265 [TaskFinalizer-7] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP (Parsnp); work-dir=/home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/33/258ed7fddc1ffdab6d32f65de9a98a
+  error [nextflow.exception.ProcessFailedException]: Process `ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP (Parsnp)` terminated with an error exit status (1)
+Aug-28 10:14:29.285 [TaskFinalizer-7] ERROR nextflow.processor.TaskProcessor - Error executing process > 'ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP (Parsnp)'
+
+Caused by:
+  Process `ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP (Parsnp)` terminated with an error exit status (1)
+
+
+Command executed:
+
+  source bash_functions.sh
+  
+  # TEMPORARY hack to avoid the v1.2 issue that thinks input ref file has
+  #  aligned nucleotide sequences if the deflines contain hyphens
+  sed -i "s/-//g" IP-0200-6_S5_L001-SPAdes_contigs.fasta
+  
+  msg "INFO: Performing the parsnp system call."
+  
+  parsnp       --sequences genomes/       --reference IP-0200-6_S5_L001-SPAdes_contigs.fasta       --output-dir Parsnp       --verbose       --use-fasttree       --curated       --threads 6       --max-partition-size 15000000
+  
+  # Move files to current directory
+  mv Parsnp/parsnp.ggr Parsnp.ggr
+  mv Parsnp/parsnp.xmfa Parsnp.xmfa
+  mv Parsnp/parsnp.snps.mblocks Parsnp.SNPs.fa
+  
+  if [[ fasttree == "fasttree" ]]; then
+    mv Parsnp/log/fasttree.out Parsnp.tree
+  else
+    mv Parsnp/parsnp.tree Parsnp.tree
+  fi
+  
+  # Verify output
+  echo -e "Sample name	QC step	Outcome (Pass/Fail)" > Parsnp_Output_File.tsv
+  for file in Parsnp.ggr Parsnp.xmfa Parsnp.SNPs.fa; do
+    if verify_minimum_file_size "${file}" "${file} Output File" "100k"; then
+      echo -e "NaN	${file} Output File	PASS" >> Parsnp_Output_File.tsv
+    else
+      echo -e "NaN	${file} Output File	FAIL" >> Parsnp_Output_File.tsv
+    fi
+  done
+  
+  # Remove the 1 additional suffix Parsnp adds to the reference sample `.ref`
+  if [[ $(grep -o -n '.ref' Parsnp.tree | wc -l) -eq 1 ]]; then
+    sed -i 's/.ref//1' Parsnp.tree Parsnp.SNPs.fa
+  fi
+  
+  gzip -9f Parsnp.SNPs.fa
+  
+  cat <<-END_VERSIONS > versions.yml
+  "ASSEMBLY_SNPS:CORE_GENOME_ALIGNMENT_PARSNP":
+      parsnp: $(parsnp --version | sed 's/^/    /')
+  END_VERSIONS
+
+Command exit status:
+  1
+
+Command output:
+  [2025-Aug-28 Thu 03:11:18] INFO: Performing the parsnp system call.
+
+Command error:
+  [2025-Aug-28 Thu 03:11:18] INFO: Performing the parsnp system call.
+  03:11:19 - [1;37mINFO[0m - |--Parsnp 2.0.3--|
+  
+  03:11:19 - [1;37mINFO[0m - 
+  ***********************
+  SETTINGS:
+  |-refgenome:	IP-0200-6_S5_L001-SPAdes_contigs.fasta
+  |-genomes:	
+  	genomes/IE-0027_S9_L001-SPAdes.fna
+  	genomes/IP-0201-4_S6_L001-SPAdes_discarded-contigs.fa
+  	...31 more file(s)...
+  	genomes/IP-0197-4_S2_L001-SPAdes_contigs.fasta
+  	genomes/IE-0029_S11_L001-SPAdes_contigs.fasta
+  |-aligner:	muscle
+  |-outdir:	Parsnp
+  |-OS:	Linux
+  |-threads:	6
+  ***********************
+      
+  03:11:19 - [1;37mINFO[0m - <<Parsnp started>>
+  03:11:19 - [1;37mINFO[0m - No genbank file provided for reference annotations, skipping..
+  03:11:19 - [1;33mWARNING[0m - File genomes/IP-0201-4_S6_L001-SPAdes_discarded-contigs.fa is 128.85x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IP-0198-2_S3_L001-SPAdes.fna is 2.14x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IE-0028_S10_L001-SPAdes_discarded-contigs.fa is 268.54x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IE-0027_S9_L001-SPAdes_discarded-contigs.fa is 232.03x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IP-0198-2_S3_L001-SPAdes_discarded-contigs.fa is 864.65x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IP-0171-9-R_S12_L001-SPAdes_discarded-contigs.fa is 140.02x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IP-0197-4_S2_L001-SPAdes_discarded-contigs.fa is 135.62x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IP-0202-2_S7_L001-SPAdes_discarded-contigs.fa is 131.13x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IE-0026_S8_L001-SPAdes_discarded-contigs.fa is 121.95x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IP-0198-2_S3_L001-SPAdes_contigs.fasta is 2.13x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IP-0200-6_S5_L001-SPAdes_discarded-contigs.fa is 112.96x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IP-0196-6_S1_L001-SPAdes_discarded-contigs.fa is 133.90x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IE-0029_S11_L001-SPAdes_discarded-contigs.fa is 185.20x shorter than reference genome! 
+  03:11:19 - [1;33mWARNING[0m - File genomes/IP-0199-0_S4_L001-SPAdes_discarded-contigs.fa is 127.24x shorter than reference genome! 
+  03:11:20 - [1;34mDEBUG[0m - Writing .ini file
+  03:11:20 - [1;37mINFO[0m - Running Parsnp multi-MUM search and libMUSCLE aligner...
+  03:11:20 - [1;34mDEBUG[0m - time /usr/local/bin/bin/parsnp_core Parsnp/parsnpAligner.ini
+  03:14:29 - [1;34mDEBUG[0m - STDOUT was piped... please see output file:	 Parsnp/log/parsnp-aligner.out
+  03:14:29 - [1;34mDEBUG[0m - STDERR was piped... please see output file:	 Parsnp/log/parsnp-aligner.err
+  03:14:29 - [1;34mDEBUG[0m - 
+  03:14:29 - [1;31mCRITICAL[0m - Set of recruited genomes are too divergent for parsnp, please reduce MUMi (0.500000) and relaunch
+  
+  03:14:29 - [1;31mCRITICAL[0m - Aligned regions cover less than 1% of reference genome, something is not right
+      Adjust params and rerun. If issue persists please submit a GitHub issue
+
+Work dir:
+  /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/33/258ed7fddc1ffdab6d32f65de9a98a
+
+Container:
+  quay.io/biocontainers/parsnp@sha256:b46999fb9842f183443dd6226b461c1d8074d4c1391c1f2b1e51cc20cee8f8b2
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+Aug-28 10:14:29.290 [TaskFinalizer-7] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
+Aug-28 10:14:29.291 [main] DEBUG nextflow.Session - Session await > all processes finished
+Aug-28 10:14:29.309 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Aug-28 10:14:29.310 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-28 10:14:29.334 [Actor Thread 10] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 36; slices: 1; internal sort time: 0.025 s; external sort time: 0.012 s; total time: 0.037 s
+Aug-28 10:14:29.336 [Actor Thread 13] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 36; slices: 1; internal sort time: 0.037 s; external sort time: 0.002 s; total time: 0.039 s
+Aug-28 10:14:29.345 [Actor Thread 10] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/collect-file/0937fd6e6e38cdbf6fc6f10ec055b0e6
+Aug-28 10:14:29.349 [Actor Thread 13] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/kornthara/tools/wf-assembly-snps-final-nextflow-run-kornthara/work/collect-file/d4f89b1d4146d473582ce20e13f88ac5
+Aug-28 10:14:29.352 [Actor Thread 10] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-278816851462014603
+Aug-28 10:14:29.352 [Actor Thread 13] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-12536197519216608315
+Aug-28 10:14:29.355 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Aug-28 10:14:29.356 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Aug-28 10:14:29.358 [main] INFO  nextflow.Nextflow - -[0;35m[bacterial-genomics/wf-assembly-snps][0;31m Pipeline completed with errors[0m-
+Aug-28 10:14:29.362 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=36; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=649ms; failedDuration=19m 5s; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=10; peakCpus=10; peakMemory=60 GB; ]
+Aug-28 10:14:29.362 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Aug-28 10:14:29.363 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Aug-28 10:14:29.815 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Aug-28 10:14:29.911 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Aug-28 10:14:29.920 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Aug-28 10:14:29.921 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
