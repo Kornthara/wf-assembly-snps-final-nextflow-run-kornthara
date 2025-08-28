@@ -1,7 +1,7 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/bacterial-genomics/wf-assembly-snps/main/assets/schema_input.json",
-    "title": "bacterial-genomics/wf-assembly-snps pipeline - params.input schema",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/nf-core/assemblysnps/master/assets/schema_input.json",
+    "title": "nf-core/assemblysnps pipeline - params.input schema",
     "description": "Schema for the file provided with params.input",
     "type": "array",
     "items": {
@@ -10,14 +10,24 @@
             "sample": {
                 "type": "string",
                 "pattern": "^\\S+$",
-                "errorMessage": "Sample name must be provided and cannot contain spaces"
+                "errorMessage": "Sample name must be provided and cannot contain spaces",
+                "meta": ["id"]
             },
-            "file": {
+            "fastq_1": {
                 "type": "string",
-                "pattern": "^\\S+\\.(fasta|fas|fna|fsa|fa)(.gz)?$",
-                "errorMessage": "FastA file must be provided, cannot contain spaces and must have extension one of the following extensions {fasta|fas|fna|fsa|fa} with optional .gz compression."
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.f(ast)?q\\.gz$",
+                "errorMessage": "FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'"
+            },
+            "fastq_2": {
+                "type": "string",
+                "format": "file-path",
+                "exists": true,
+                "pattern": "^\\S+\\.f(ast)?q\\.gz$",
+                "errorMessage": "FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'"
             }
         },
-        "required": ["sample", "file"]
+        "required": ["sample", "fastq_1"]
     }
 }

@@ -1,188 +1,106 @@
 <h1>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/images/wf-assembly-snps_logo_dark.png">
-    <img alt="bacterial-genomics/wf-assembly-snps" src="docs/images/wf-assembly-snps_logo_light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/nf-core-assemblysnps_logo_dark.png">
+    <img alt="nf-core/assemblysnps" src="docs/images/nf-core-assemblysnps_logo_light.png">
   </picture>
 </h1>
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/bacterial-genomics/wf-assembly-snps)
-[![Nextflow](https://img.shields.io/badge/nextflow%20DSL2-%E2%89%A522.04.3-23aa62.svg)](https://www.nextflow.io/)
+[![GitHub Actions CI Status](https://github.com/nf-core/assemblysnps/actions/workflows/ci.yml/badge.svg)](https://github.com/nf-core/assemblysnps/actions/workflows/ci.yml)
+[![GitHub Actions Linting Status](https://github.com/nf-core/assemblysnps/actions/workflows/linting.yml/badge.svg)](https://github.com/nf-core/assemblysnps/actions/workflows/linting.yml)[![AWS CI](https://img.shields.io/badge/CI%20tests-full%20size-FF9900?labelColor=000000&logo=Amazon%20AWS)](https://nf-co.re/assemblysnps/results)[![Cite with Zenodo](http://img.shields.io/badge/DOI-10.5281/zenodo.XXXXXXX-1073c8?labelColor=000000)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![nf-test](https://img.shields.io/badge/unit_tests-nf--test-337ab7.svg)](https://www.nf-test.com)
+
+[![Nextflow](https://img.shields.io/badge/nextflow%20DSL2-%E2%89%A524.04.2-23aa62.svg)](https://www.nextflow.io/)
+[![run with conda](http://img.shields.io/badge/run%20with-conda-3EB049?labelColor=000000&logo=anaconda)](https://docs.conda.io/en/latest/)
 [![run with docker](https://img.shields.io/badge/run%20with-docker-0db7ed?labelColor=000000&logo=docker)](https://www.docker.com/)
 [![run with singularity](https://img.shields.io/badge/run%20with-singularity-1d355c.svg?labelColor=000000)](https://sylabs.io/docs/)
-[![MegaLinter](https://github.com/bacterial-genomics/wf-assembly-snps/actions/workflows/mega-linter.yml/badge.svg)](https://github.com/bacterial-genomics/wf-assembly-snps/actions/workflows/mega-linter.yml)
+[![Launch on Seqera Platform](https://img.shields.io/badge/Launch%20%F0%9F%9A%80-Seqera%20Platform-%234256e7)](https://cloud.seqera.io/launch?pipeline=https://github.com/nf-core/assemblysnps)
 
-![workflow](docs/images/wf-assembly-snps_workflow.png)
-
-> _General schematic of the steps in the workflow_
-
-## Contents
-
-- [Quick Start](#quick-start-test)
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Parameters](#parameters)
-  - [Required parameters](#required-parameters)
-  - [Additonal parameters](#additional-parameters)
-- [Resource Managers](#resource-managers)
-- [Output](#output)
-- [Troubleshooting](#troubleshooting)
-- [Contributions and Support](#contributions-and-support)
-- [Citations](#citations)
-
-## Quick Start: Test
-
-Run the built-in test set to confirm all parts are working as-expected. It will also download all dependencies to make subsequent runs much faster.
-
-### Pull workflow from GitHub
-
-```bash
-nextflow pull bacterial-genomics/wf-assembly-snps -r main
-```
-
-### Run test workflow
-
-```bash
-nextflow run \
-  bacterial-genomics/wf-assembly-snps \
-  -r main \
-  -profile docker,test \
-  --outdir results
-```
-
-## Quick Start: Run
-
-Example command on FastAs in "new-fasta-dir" data using **BLAST** with singularity:
-
-### Run workflow
-
-```bash
-nextflow run \
-  bacterial-genomics/wf-assembly-snps \
-  -r main \
-  -profile docker \
-  --input new-fasta-dir \
-  --outdir my-results \
-  --snp_package parsnp
-```
+[![Get help on Slack](http://img.shields.io/badge/slack-nf--core%20%23assemblysnps-4A154B?labelColor=000000&logo=slack)](https://nfcore.slack.com/channels/assemblysnps)[![Follow on Twitter](http://img.shields.io/badge/twitter-%40nf__core-1DA1F2?labelColor=000000&logo=twitter)](https://twitter.com/nf_core)[![Follow on Mastodon](https://img.shields.io/badge/mastodon-nf__core-6364ff?labelColor=FFFFFF&logo=mastodon)](https://mstdn.science/@nf_core)[![Watch on YouTube](http://img.shields.io/badge/youtube-nf--core-FF0000?labelColor=000000&logo=youtube)](https://www.youtube.com/c/nf-core)
 
 ## Introduction
 
-This workflow performs average nucleotide identity on assembled and/or annotated files (FastA/Genbank).
+**nf-core/assemblysnps** is a bioinformatics pipeline that ...
 
-## Installation
+<!-- TODO nf-core:
+   Complete this sentence with a 2-3 sentence summary of what types of data the pipeline ingests, a brief overview of the
+   major pipeline sections and the types of output it produces. You're giving an overview to someone new
+   to nf-core here, in 15-20 seconds. For an example, see https://github.com/nf-core/rnaseq/blob/master/README.md#introduction
+-->
 
-- [Nextflow](https://www.nextflow.io/docs/latest/getstarted.html#installation) `>=22.04.03`
-- [Docker](https://docs.docker.com/engine/installation/) or [Singularity](https://www.sylabs.io/guides/3.0/user-guide/) `>=3.8.0`
-- [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) is currently unsupported
+<!-- TODO nf-core: Include a figure that guides the user through the major workflow steps. Many nf-core
+     workflows use the "tube map" design for that. See https://nf-co.re/docs/contributing/design_guidelines#examples for examples.   -->
+<!-- TODO nf-core: Fill in short bullet-pointed list of the default steps in the pipeline -->1. Read QC ([`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))2. Present QC for raw reads ([`MultiQC`](http://multiqc.info/))
 
 ## Usage
 
-```bash
-nextflow run main.nf \
-  -profile docker \
-  --input <input directory> \
-  --ref <optional reference file> \
-  --outdir <directory for results> \
-  --snp_package <parsnp>
+> [!NOTE]
+> If you are new to Nextflow and nf-core, please refer to [this page](https://nf-co.re/docs/usage/installation) on how to set-up Nextflow. Make sure to [test your setup](https://nf-co.re/docs/usage/introduction#how-to-run-a-pipeline) with `-profile test` before running the workflow on actual data.
+
+<!-- TODO nf-core: Describe the minimum required steps to execute the pipeline, e.g. how to prepare samplesheets.
+     Explain what rows and columns represent. For instance (please edit as appropriate):
+
+First, prepare a samplesheet with your input data that looks as follows:
+
+`samplesheet.csv`:
+
+```csv
+sample,fastq_1,fastq_2
+CONTROL_REP1,AEG588A1_S1_L002_R1_001.fastq.gz,AEG588A1_S1_L002_R2_001.fastq.gz
 ```
 
-Please see the [usage documentation](docs/usage.md) for further information on using this workflow.
+Each row represents a fastq file (single-end) or a pair of fastq files (paired end).
 
-## Parameters
+-->
 
-Note the "`--`" long name arguments (e.g., `--help`, `--input`, `--outdir`) are generally specific to this workflow's options, whereas "`-`" long name options (e.g., `-help`, `-latest`, `-profile`) are general nextflow options.
+Now, you can run the pipeline using:
 
-These are the most pertinent options for this workflow:
-
-### Required parameters
-
-```console
-  ============================================
-        Input/Output
-  ============================================
-  --input                 Path to input data directory containing FastA/Genbank assemblies or samplesheet.
-                          Recognized extensions are:  {fasta,fas,fna,fsa,fa} with optional gzip compression.
-
-  --ref                   Path to reference file in FastA format.
-                          Recognized extensions are:  {fasta,fas,fna,fsa,fa} with optional gzip compression. [Default: NaN]
-
-  --outdir                The output directory where the results will be saved.
-
-
-  ============================================
-        Container platforms
-  ============================================
-  -profile singularity    Use Singularity images to run the workflow.
-                          Will pull and convert Docker images from Dockerhub if not locally available.
-
-  -profile docker         Use Docker images to run the workflow.
-                          Will pull images from Dockerhub if not locally available.
-
-
-  ============================================
-        Optional alignment tools
-  ============================================
-  --snp_package           Specify what algorithm should be used to compare input files.
-                          Recognized arguments are: parsnp. [Default: parsnp]
-```
-
-### Additional parameters
-
-View help menu of all workflow options:
+<!-- TODO nf-core: update the following command to include all required parameters for a minimal example -->
 
 ```bash
-nextflow run \
-  bacterial-genomics/wf-assembly-snps \
-  -r main \
-  --help \
-  --show_hidden_params
+nextflow run nf-core/assemblysnps \
+   -profile <docker/singularity/.../institute> \
+   --input samplesheet.csv \
+   --outdir <OUTDIR>
 ```
 
-### Clustering parameters (scalable mode)
+> [!WARNING]
+> Please provide pipeline parameters via the CLI or Nextflow `-params-file` option. Custom config files including those provided by the `-c` Nextflow option can be used to provide any configuration _**except for parameters**_; see [docs](https://nf-co.re/docs/usage/getting_started/configuration#custom-configuration-files).
 
-When using `--scalable_mode`, the following parameters control the clustering behavior:
+For more details and further functionality, please refer to the [usage documentation](https://nf-co.re/assemblysnps/usage) and the [parameter documentation](https://nf-co.re/assemblysnps/parameters).
 
-```console
-  --mash_threshold        Distance threshold for clustering samples (default: 0.03)
-                         Lower values create more clusters with more similar samples
-                         Higher values create fewer clusters with more diverse samples
+## Pipeline output
 
-  --max_cluster_size      Maximum number of samples per cluster (default: 100)
-                         Large clusters are automatically split into smaller ones
+To see the results of an example test run with a full size dataset refer to the [results](https://nf-co.re/assemblysnps/results) tab on the nf-core website pipeline page.
+For more details about the output files and reports, please refer to the
+[output documentation](https://nf-co.re/assemblysnps/output).
 
-  --merge_singletons      Merge all singleton clusters into one large cluster (default: false)
-                         Use this when most samples are singletons but you still want phylogenetic analysis
-```
+## Credits
 
-**Note:** Phylogenetic analysis requires at least 3 samples per cluster. If all samples end up in singleton clusters or small clusters (2 samples), consider adjusting `--mash_threshold` to a higher value or using `--merge_singletons`.
+nf-core/assemblysnps was originally written by Seqera AI.
 
-## Resource Managers
+We thank the following people for their extensive assistance in the development of this pipeline:
 
-The most well-tested and supported is a Univa Grid Engine (UGE) job scheduler with Singularity for dependency handling.
-
-1. UGE/SGE
-    - Additional tips for UGE processing are [here](docs/HPC-UGE-scheduler.md).
-2. No Scheduler
-    - It has also been confirmed to work on desktop and laptop environments without a job scheduler using Docker with more tips [here](docs/local-device.md).
-
-## Output
-
-Please see the [output documentation](docs/output.md) for a table of all outputs created by this workflow.
-
-## Troubleshooting
-
-Q: It failed, how do I find out what went wrong?
-
-A: View file contents in the `<outdir>/pipeline_info` directory.
+<!-- TODO nf-core: If applicable, make list of people who have also contributed -->
 
 ## Contributions and Support
 
 If you would like to contribute to this pipeline, please see the [contributing guidelines](.github/CONTRIBUTING.md).
 
+For further information or help, don't hesitate to get in touch on the [Slack `#assemblysnps` channel](https://nfcore.slack.com/channels/assemblysnps) (you can join with [this invite](https://nf-co.re/join/slack)).
+
 ## Citations
 
+<!-- TODO nf-core: Add citation for pipeline after first release. Uncomment lines below and update Zenodo doi and badge at the top of this file. -->
+<!-- If you use nf-core/assemblysnps for your analysis, please cite it using the following doi: [10.5281/zenodo.XXXXXX](https://doi.org/10.5281/zenodo.XXXXXX) -->
+
+<!-- TODO nf-core: Add bibliography of tools and data used in your pipeline -->
+
 An extensive list of references for the tools used by the pipeline can be found in the [`CITATIONS.md`](CITATIONS.md) file.
-# wf-assembly-snps-final
-# wf-assembly-snps-final-nextflow-run
-# wf-assembly-snps-final-nextflow-run-kornthara
+
+You can cite the `nf-core` publication as follows:
+
+> **The nf-core framework for community-curated bioinformatics pipelines.**
+>
+> Philip Ewels, Alexander Peltzer, Sven Fillinger, Harshil Patel, Johannes Alneberg, Andreas Wilm, Maxime Ulysse Garcia, Paolo Di Tommaso & Sven Nahnsen.
+>
+> _Nat Biotechnol._ 2020 Feb 13. doi: [10.1038/s41587-020-0439-x](https://dx.doi.org/10.1038/s41587-020-0439-x).

@@ -1,0 +1,7 @@
+name: harvesttools
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - harvesttools=1.3
